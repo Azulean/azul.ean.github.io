@@ -3,28 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <style>
+    @font-face {
+   font-family: "Sans Serif";
+  ;
+}
+
+	p {
+   font-family: "Noto Sans";
+	}
         <div align="center" style="position:fixed; top:10%;left:10%;">ScouDr.</div>
+        
+        .selectWrapper{
+  border-radius:36px;
+  display:inline-block;
+  overflow:hidden;
+  background:gold;
+  border:1px solid #gold;
+}
+.selectBoxLong{
+  width:240px;
+  height:40px;
+  border:0px;
+  outline:none;
+}
+.selectBox{
+  width:140px;
+  height:40px;
+  border:0px;
+  outline:none;
+}
+        
         h1 {
+        	font-family: "Noto Serif";
+            color:white;
             text-shadow: 2px 2px 5px lightblue;
+            font-size:50px;
         }
         ul {
+        	font-family: "Noto Sans";
+            color: white;
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
+        body{
+        	background-color:lightblue;
+            }
+        h1 {
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+        }
+        
+        
+        
     </style>
-    <title>ScoutDr.</title>
+    <title>ScouDr.</title>
 </head>
 <body>
+<fieldset>
 <div id="navbar" class="navbar-collapse collapse">
-    <ul class="nav navbar-nav" style="position: relative; z-index: 2;">
-        <li><a href="/">Home</a>
+    <ul class="navigation" style="position: relative; z-index: 2;">
+ 		<li><a href="/">Home</a></li>
         <li><a href="/">ScouDr.</a></li>
         <li><a href="/">Teams(Ranks etc.?)</a></li>
     </ul>
-
+   	</fieldset>
+    
     <div class="special-title">
+    
     <h1>ScouDr.</h1>
 </div>
 
@@ -32,8 +77,9 @@
     Team: <input type="text" name="fname"><br><br>
 
 
-    <select>
-        <option value="" disabled="disabled" selected="selected"> High Goals Scored (Approximate #)</option>
+    <select class="selectBoxLong">
+    <div class="selectWrapper">
+        <option value="" disabled="disabled" selected="selected"><p> High Goals Scored (Approximate #)</p></option>
         <option value="1">0</option>
         <option value="2">1-20</option>
         <option value="3">21-40</option>
@@ -42,9 +88,10 @@
         <option value="6">81-100</option>
         <option value="7">101-120</option>
         <option value="8">121+</option>
-    </select><br><br>
+    </div></select><br><br>
 
-    <select>
+    <select class="selectBoxLong">
+    <div class="selectWrapper">
         <option value="" disabled="disabled" selected="selected"> Low Goals Scored (Approximate #)</option>
         <option value="1">0</option>
         <option value="2">1-20</option>
@@ -54,7 +101,7 @@
         <option value="6">81-100</option>
         <option value="7">101-120</option>
         <option value="8">121+</option>
-    </select><br><br>
+    </div></select><br><br>
                                                                
 <form>
     <form action="learnphp.asp" method="post" target="_blank">
@@ -70,17 +117,18 @@
     <br>
     <br>
     <fieldset>
+    <div class="selectWrapper">
     <form action="big_ol_page.asp" method="post" target="_blank">
-      <p>
+     <p> 
       <label>Current Competition</label>
-        <select id="myList">
+        <select class="selectBox">
           <option value="1">LONG BEACH</option>
           <option value="2">CHINO HILLS</option>
           <option value="3">OTHER COMP</option>
           <option value="4">????</option>
         </select>
-      </p>
-      </form><br><br>
+        </p>
+      </form></div><br><br>
     </fieldset>
     
 <input type="submit" value="Submit" method="post">
@@ -88,13 +136,13 @@
 <br>
 <br>
 <style> .dropdown {
-  position: absolute;
+  position: relative;
   display: inline-block;
 }
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: relative;
   background-color: #f9f9f9;
   min-width: 120px;
   padding: 12px 16px;
@@ -107,4 +155,3 @@
 
 </style> <div class="dropdown"> <span>I have a secret to tell you;
       </span> <div class="dropdown-content"> <p>I can't believe it's not butter... IS NOT BUTTER</p> </div> </div>
-      
