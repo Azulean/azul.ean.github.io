@@ -3,11 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <style>
-    @font-face {
-   font-family: "Sans Serif";
-  ;
+ 
+ 
+ @media only screen and (max-device-width : 800px) {
+	.wrapper {
+		max-width: 800px !important;
+		margin-left: 5px;
+		padding-bottom: 16vh !important;
+	}
+	.linky {
+		margin: 4px 4px 4px 4px !important;
+		padding: 2px 2px 2px 2px !important;
+		letter-spacing: 1px !important;
+		border: 2px solid #fff;
+	}
+	.foot-nav {
+		position:fixed;
+		z-index: 3;
+		bottom: 0px;
+		right: 0px;
+		background-color: #0e6635;
+		text-align: center;
+		width: 100%;
+		height: 15vh;
+	}
+}
+@media only screen and (min-device-width : 801px) {
+	.wrapper {
+		margin-left: 25vw;
+		margin-right: 25vw;
+		padding-bottom: 11vh !important;
+		max-width: 75vw !important;
+	}
+	.foot-nav {
+	position:fixed;
+	z-index: 3;
+	bottom: 0px;
+	right: 0px;
+	background-color: #0e6635;
+	text-align: center;
+	width: 100%;
+	height: 10vh;
+}
+}
+    	.wrapper {
+		margin-left: 25vw;
+		margin-right: 25vw;
+		padding-bottom: 11vh !important;
+		max-width: 75vw !important;
+	}
+    .linky {
+		margin: 4px 4px 4px 4px !important;
+		padding: 2px 2px 2px 2px !important;
+		letter-spacing: 1px !important;
+		border: 4px solid #fff;
+		background-color:darkgreen;
+	}
+a {
+    text-decoration:none;
+    color: white;
+}
+.linky {
+	text-transform: uppercase;
+	margin: 15px 5px 15px 5px;
+	padding: 5px 5px 5px 5px;
+	border: 2px solid #fff;
+	display: inline;
+	letter-spacing: 3px;
+	transition-property: color, background-color;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
 }
 
+.linky:hover {
+	transition-property: color, background-color;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+	color: #000;
+	background-color: #fff;
+}
+.linky > a:hover
+{
+	color: #000 !important;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+}
+    
+	.foot-nav {
+	font-family:"Noto Sans";
+	position:absolute;
+	z-index: 3;
+	top:0px;
+	right: 0px;
+	background-color: background-color;
+	text-align: center;
+	width: 100%;
+	height:0;
+}
+    
 	p {
    font-family: "Noto Sans";
 	}
@@ -18,7 +111,7 @@
   display:inline-block;
   overflow:hidden;
   background:gold;
-  border:1px solid #gold;
+  border:1px solid;
 }
 .selectBoxLong{
   width:240px;
@@ -32,13 +125,28 @@
   border:0px;
   outline:none;
 }
-        
+          i { 
+    font-style: italic;
+}
+        medium {
+          font-size:24px;
+        }
         h1 {
         	font-family: "Noto Serif";
             color:white;
             text-shadow: 2px 2px 5px lightblue;
-            font-size:50px;
-        }
+            font-size:75px
+			}
+		h2 {
+		font-family: "Noto Sans";
+		}
+		h3 {
+		font-family: "Noto Sans";
+		}
+		h4 {
+		font-family: "Noto Sans";
+		}
+
         ul {
         	font-family: "Noto Sans";
             color: white;
@@ -46,37 +154,91 @@
             margin: 0;
             padding: 0;
         }
-        body{
-        	background-color:lightblue;
-            }
-        h1 {
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-        }
-        
-        
-        
+        p{
+          font-family: "Noto Sans";
+          color: white;
+          }
+		  p1{
+			font-family:"Noto Sans";
+			margin left:2em;
+			}
+		 p2{
+			font-family: "Noto Sans";
+			margin-left: 2em
+			font-size:30px;
+			}
+
+    body {
+	background-color: gray;
+	color: white;
+	margin: 0px;
+}
+          <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+		  
     </style>
     <title>ScouDr.</title>
 </head>
 <body>
-<fieldset>
-<div id="navbar" class="navbar-collapse collapse">
-    <ul class="navigation" style="position: relative; z-index: 2;">
- 		<li><a href="/">Home</a></li>
-        <li><a href="/">ScouDr.</a></li>
-        <li><a href="/">Teams(Ranks etc.?)</a></li>
+<div class="wrapper">
+   <div class="foot-nav">
+      <div class="linky">
+ 		<a href="/">Home</a>
+      </div>
+      <div class="linky">
+        <a href="/">ScouDr.</a>
+        </div>
+        <div class="linky">
+        <a href="/">Stats</a>
+        </div>
+        </div>
     </ul>
-   	</fieldset>
-    
+   	
     <div class="special-title">
-    
-    <h1>ScouDr.</h1>
-</div>
+   <br><center><h1>ScouDr.</h1></center>
+</div><hr>
+<p><form action="wellitsaplaceholderfornow">
 
-<form action="wellitsaplaceholderfornow">
-    Team: <input type="text" name="fname"><br><br>
+    Team: <input type="number" name="teams" min="0" max="99999" maxlength="5">
+
+<table>
+	<tbody><tr><td><input type="checkbox" name="notShow" value="1">Robot did NOT SHOW</td></tr>
+	<tr><td><input type="checkbox" name="notWorking" value="1">Robot does NOT WORK</td></tr><br>
+</tbody></table><hr>
+<strong><h2><i>Autonomous</i></h2></strong>	
+<fieldset>
+<div>
+	<input type="checkbox" name="noAuto" value="1">No Auto
+	<input type="checkbox" name="crossBase" value="1">Crosses Baseline<br><hr>
+	
+	<u><h3><i>Fuel</i></h3></u>
+	<input type="checkbox" name="cantFuel" value="1">Cannot Handle Fuel
+	
+	<u><h4>Low Goal:<h4></u>
+	Low Goal Attempt Successful <input type="radio" name="ALGoalAttempt" value="1">Yes<input type="radio" name="ALGoalAttempt" value="0">No<br>
+	<i>Speed</i><input type="radio" name="LGspeed" value="1">Slow<input type="radio" name="LGspeed" value="2">Moderate<input type="radio" name="LGspeed" value="3">Fast<br>
+	 Low Goals Accuracy (0-10)
+<input type="radio" name="LGAccuracy" value="0">0<input type="radio" name="LGAccuracy" value="1">1<input type="radio" name="LGAccuracy" value="3">2<input type="radio" name="LGAccuracy" value="3">3<input type="radio" name="LGAccuracy" value="4">4<input type="radio" name="LGAccuracy"value="5">5<input type="radio" name="LGAccuracy"value="6">6<input type="radio" name="LGAccuracy"value="7">7<input type="radio" name="LGAccuracy"value="8">8<input type="radio" name="LGAccuracy" value="9">9<input type="radio" name="LGAccuracy"value="10">10
+	<u><p>High Goal:<p></u>
+	High Goal Attempt Successful <input type="radio" name="AHGoalAttempt" value="1">Yes<input type="radio" name="AHGoalAttempt" value="0">No<br>
+	 High Goal Accuracy (0-10)
+<input type="radio" name="HGAccuracy" value="0">0<input type="radio" name="HGAccuracy" value="1">1<input type="radio" name="HGAccuracy" value="3">2<input type="radio" name="HGAccuracy" value="3">3<input type="radio" name="HGAccuracy" value="4">4<input type="radio" name="HGAccuracy"value="5">5<input type="radio" name="HGAccuracy"value="6">6<input type="radio" name="HGAccuracy"value="7">7<input type="radio" name="HGAccuracy"value="8">8<input type="radio" name="HGAccuracy" value="9">9<input type="radio" name="HGAccuracy"value="10">10
+		<br><i>Speed</i><input type="radio" name="HGspeed" value="1">Slow<input type="radio" name="HGspeed" value="2">Moderate<input type="radio" name="HGspeed" value="3">Fast<br>
+	<u><p><i>Gears:</i></p></u>
+	Attempted <input type="checkbox" name="GearAttempt" value="1"><br>
+	Delivered <input type="checkbox" name="GearDelivered" value="1">
+	<u><p><i>Hoppers (50 Balls Each):</i></p></u>
+	Deployed <input type="number" name="GearAttempt" min="0" max="10">
+</fieldset>
+<h2>Tele-Operated</h2>
+
+<fieldset>
+<u><h3><i>Fuel</i><h3></u>
+
+</fieldset>
 
 
+
+</fieldset>
     <select class="selectBoxLong">
     <div class="selectWrapper">
         <option value="" disabled="disabled" selected="selected"><p> High Goals Scored (Approximate #)</p></option>
@@ -88,8 +250,9 @@
         <option value="6">81-100</option>
         <option value="7">101-120</option>
         <option value="8">121+</option>
+        
+        
     </div></select><br><br>
-
     <select class="selectBoxLong">
     <div class="selectWrapper">
         <option value="" disabled="disabled" selected="selected"> Low Goals Scored (Approximate #)</option>
@@ -116,42 +279,14 @@
     </form>
     <br>
     <br>
-    <fieldset>
+	
+    <input type="submit" value="Submit" method="post"> 
+     </div>
+    </form>
     <div class="selectWrapper">
-    <form action="big_ol_page.asp" method="post" target="_blank">
-     <p> 
-      <label>Current Competition</label>
-        <select class="selectBox">
-          <option value="1">LONG BEACH</option>
-          <option value="2">CHINO HILLS</option>
-          <option value="3">OTHER COMP</option>
-          <option value="4">????</option>
-        </select>
-        </p>
-      </form></div><br><br>
-    </fieldset>
-    
-<input type="submit" value="Submit" method="post">
-  
+    <form action="index.php" method="post" target="_blank"> 
+</div></body>  
 <br>
 <br>
-<style> .dropdown {
-  position: relative;
-  display: inline-block;
-}
 
-.dropdown-content {
-  display: none;
-  position: relative;
-  background-color: #f9f9f9;
-  min-width: 120px;
-  padding: 12px 16px;
-  z-index: -1;
-}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-</style> <div class="dropdown"> <span>I have a secret to tell you;
-      </span> <div class="dropdown-content"> <p>I can't believe it's not butter... IS NOT BUTTER</p> </div> </div>
