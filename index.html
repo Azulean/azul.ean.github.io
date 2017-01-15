@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-
     <meta charset="UTF-8">
+
     <style>
  
  
@@ -18,18 +16,18 @@
 		margin: 4px 4px 4px 4px !important;
 		padding: 2px 2px 2px 2px !important;
 		letter-spacing: 1px !important
-		font-size: 25px
+		font-size: 30px
 		border: 2px solid #fff;
 	}
 	.foot-nav {
 		position:fixed;
 		z-index: 3;
-		bottom: 0px;
+		top: 0px;
 		right: 0px;
 		background-color: #0e6635;
 		text-align: center;
 		width: 100%;
-		height: 15vh;
+		height: 10vh;
 	}
 }
 @media only screen and (min-device-width : 801px) {
@@ -63,14 +61,17 @@
 		background-color:#0e6635;
 		font-size: 30px
 	}
-a {
+a, a:link {
     text-decoration:none;
     color: white;
+	font-family:"Roboto";
+	text-align:center;
+	display: inline-block;
 }
 .linky {
 	text-transform: uppercase;
 	margin: 15px 5px 15px 5px;
-	padding: 5px 5px 5px 5px;
+	padding: 10px 10px 10px 10px;
 	border: 2px solid #fff;
 	display: inline;
 	letter-spacing: 1px;
@@ -78,6 +79,7 @@ a {
 	transition-duration: 0.5s;
 	transition-timing-function: ease;
 	font-size: 30px
+	font-family:"Roboto";
 }
 
 .linky:hover {
@@ -86,16 +88,18 @@ a {
 	transition-timing-function: ease;
 	color: #000;
 	background-color: #fff;
+	font-family:"Roboto";
 }
 .linky > a:hover
 {
 	color: #000 !important;
 	transition-duration: 0.5s;
 	transition-timing-function: ease;
+	font-family:"Roboto";
 }
     
 	.foot-nav {
-	font-family:"Noto Sans";
+	font-family:"Roboto";
 	position:absolute;
 	z-index: 3;
 	top:0px;
@@ -105,11 +109,7 @@ a {
 	width: 100%;
 	height:0;
 }
-    
-	p {
-   font-family: "Noto Sans";
-	}
-        <div align="center" style="position:fixed; top:10%;left:10%;">ScouDr.</div>
+}
         
         .selectWrapper{
   border-radius:36px;
@@ -130,41 +130,41 @@ a {
   border:0px;
   outline:none;
 }
-          i { 
-    font-style: italic;
-}
+         i { 
+			font-style: italic;
+		}
         medium {
           font-size:24px;
         }
         h1 {
-        	font-family: "Noto Serif";
+        	font-family: "Roboto";
             color:white;
             text-shadow: 2px 2px 5px lightblue;
             font-size:75px
 			}
 		h2 {
-		font-family: "Noto Sans";
+		font-family: "Roboto";
 		}
 		h3 {
-		font-family: "Noto Sans";
+		font-family: "Roboto";
 		}
 		h4 {
-		font-family: "Noto Sans";
+		font-family: "Roboto";
 		}
 
         ul {
-        	font-family: "Noto Sans";
+        	font-family: "Roboto";
             color: white;
             list-style-type: none;
             margin: 0;
             padding: 0;
         }
         p{
-          font-family: "Noto Sans";
+          font-family: "Roboto";
           color: white;
           }
 		  p1{
-			font-family:"Noto Sans";
+			font-family:"Roboto";
 			margin left:2em;
 			}
 		 p2{
@@ -174,17 +174,31 @@ a {
 			}
 
     body {
+		
 	font-family: "Roboto";
-	background-color: rgb(14,3, 16);
+	background-color: #1f1f1f;
 	color: #fff;
 	margin: 0px;
+
 }
+
           <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
 		  
     </style>
+	<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+	</head>
     <title>ScouDr.</title>
 </head>
 <body>
+
+	
+<div id="header">
+	<div id="header-content">
+		<a href="http://therobodox.org">Robodox</a>
+		</div>
+	</div>
+
 <div class="wrapper">
    <div class="foot-nav">
       <div class="linky">
@@ -204,37 +218,38 @@ a {
 </div><hr>
 <p><form action="wellitsaplaceholderfornow">
 
-    <p2>Team:</p2><input type="number" name="teams" min="0" max="99999" maxlength="5">
+    <strong>Team : <input type="number" name="teams" min="0" max="99999" maxlength="5">
 
 <table>
-	<tbody><tr><td><input type="checkbox" name="notShow" value="1">Robot does NOT SHOW</td></tr>
-	<tr><td><input type="checkbox" name="notWorking" value="1">Robot does NOT WORK</td></tr><br>
+	<tbody><tr><td><input type="checkbox" name="notShow" value="1"><strong>Robot does NOT SHOW</td></tr>
+	<tr><td><input type="checkbox" name="notWorking" value="1"><strong>Robot does NOT WORK</td></tr><br>
 </tbody></table><hr>
 <strong><h2><i>Autonomous</i></h2></strong>	
 <fieldset>
 <div>
-	<input type="checkbox" name="noAuto" value="1">No Auto
+	<strong><input type="checkbox" name="noAuto" value="1">No Auto
 	<input type="checkbox" name="crossBase" value="1">Crosses Baseline<br><hr>
 	
-	<u><h3><i>Fuel</i></h3></u>
-	<input type="checkbox" name="cantFuel" value="1">Cannot Handle Fuel
+	<u><h3>Fuel</h3></u>
+	<input type="checkbox" name="cantFuel" value="1">Cannot Handle Fuel</strong>
 	
 	<u><h4>Low Goal:<h4></u>
-	Low Goal Attempt Successful <input type="radio" name="ALGoalAttempt" value="1">Yes<input type="radio" name="ALGoalAttempt" value="0">No<br>
+	Low Goal Attempt Successful <input type="radio" name="ALGoalAttempt" value="1">Yes <input type="radio" name="ALGoalAttempt" value="0">No <br>
 	<i>Speed</i><input type="radio" name="LGspeed" value="1">Slow<input type="radio" name="LGspeed" value="2">Moderate<input type="radio" name="LGspeed" value="3">Fast<br>
 	 Low Goals Accuracy (0-10)
-<input type="radio" name="LGAccuracy" value="0">0<input type="radio" name="LGAccuracy" value="1">1<input type="radio" name="LGAccuracy" value="3">2<input type="radio" name="LGAccuracy" value="3">3<input type="radio" name="LGAccuracy" value="4">4<input type="radio" name="LGAccuracy"value="5">5<input type="radio" name="LGAccuracy"value="6">6<input type="radio" name="LGAccuracy"value="7">7<input type="radio" name="LGAccuracy"value="8">8<input type="radio" name="LGAccuracy" value="9">9<input type="radio" name="LGAccuracy"value="10">10
+<input type="radio" name="LGAccuracy" value="0">0 <input type="radio" name="LGAccuracy" value="1">1 <input type="radio" name="LGAccuracy" value="3">2 <input type="radio" name="LGAccuracy" value="3">3 <input type="radio" name="LGAccuracy" value="4">4 <input type="radio" name="LGAccuracy"value="5">5 <input type="radio" name="LGAccuracy"value="6">6 <input type="radio" name="LGAccuracy"value="7">7 <input type="radio" name="LGAccuracy"value="8">8 <input type="radio" name="LGAccuracy" value="9">9 <input type="radio" name="LGAccuracy"value="10">10 
 	<u><p>High Goal:<p></u>
 	High Goal Attempt Successful <input type="radio" name="AHGoalAttempt" value="1">Yes<input type="radio" name="AHGoalAttempt" value="0">No<br>
 	 High Goal Accuracy (0-10)
-<input type="radio" name="HGAccuracy" value="0">0<input type="radio" name="HGAccuracy" value="1">1<input type="radio" name="HGAccuracy" value="3">2<input type="radio" name="HGAccuracy" value="3">3<input type="radio" name="HGAccuracy" value="4">4<input type="radio" name="HGAccuracy"value="5">5<input type="radio" name="HGAccuracy"value="6">6<input type="radio" name="HGAccuracy"value="7">7<input type="radio" name="HGAccuracy"value="8">8<input type="radio" name="HGAccuracy" value="9">9<input type="radio" name="HGAccuracy"value="10">10
-		<br><i>Speed</i><input type="radio" name="HGspeed" value="1">Slow<input type="radio" name="HGspeed" value="2">Moderate<input type="radio" name="HGspeed" value="3">Fast<br>
-	<u><p><i>Gears:</i></p></u>
+<input type="radio" name="HGAccuracy" value="0">0 <input type="radio" name="HGAccuracy" value="1">1 <input type="radio" name="HGAccuracy" value="3">2 <input type="radio" name="HGAccuracy" value="3">3 <input type="radio" name="HGAccuracy" value="4">4 <input type="radio" name="HGAccuracy"value="5">5 <input type="radio" name="HGAccuracy"value="6">6 <input type="radio" name="HGAccuracy"value="7">7 <input type="radio" name="HGAccuracy"value="8">8 <input type="radio" name="HGAccuracy" value="9">9 <input type="radio" name="HGAccuracy"value="10">10 
+		<br>Speed <input type="radio" name="HGspeed" value="1">Slow<input type="radio" name="HGspeed" value="2">Moderate<input type="radio" name="HGspeed" value="3">Fast<br>
+	<u><p>Gears:</p></u>
 	Attempted <input type="checkbox" name="GearAttempt" value="1"><br>
 	Delivered <input type="checkbox" name="GearDelivered" value="1">
-	<u><p><i>Hoppers (50 Balls Each):</i></p></u>
+	<u><p>Hoppers (50 Balls Each):</p></u>
 	Deployed <input type="number" name="GearAttempt" min="0" max="10">
 </fieldset>
+
 <i><h2>Tele-Operated</h2></i>
 
 <fieldset>
@@ -243,11 +258,13 @@ a {
 </fieldset>
 
 
+<!--Unnecessary for the moment 
+	Kind of just for a reference xD 
 
 </fieldset>
     <select class="selectBoxLong">
     <div class="selectWrapper">
-        <option value="" disabled="disabled" selected="selected"><p> High Goals Scored (Approximate #)</p></option>
+        <option value="" disabled="disabled" selected="selected"><p><strong>High Goals Scored (Approximate #)</p></option>
         <option value="1">0</option>
         <option value="2">1-20</option>
         <option value="3">21-40</option>
@@ -261,15 +278,15 @@ a {
     </div></select><br><br>
     <select class="selectBoxLong">
     <div class="selectWrapper">
-        <option value="" disabled="disabled" selected="selected"> Low Goals Scored (Approximate #)</option>
-        <option value="1">0</option>
-        <option value="2">1-20</option>
-        <option value="3">21-40</option>
-        <option value="4">41-60</option>
-        <option value="5">61-80</option>
-        <option value="6">81-100</option>
-        <option value="7">101-120</option>
-        <option value="8">121+</option>
+        <option value="0" disabled="disabled" selected="selected"><strong>Low Goals Scored (Approximate #)</option>
+        <option value="0">0</option>
+        <option value="1">1-20</option>
+        <option value="2">21-40</option>
+        <option value="3">41-60</option>
+        <option value="4">61-80</option>
+        <option value="5">81-100</option>
+        <option value="6">101-120</option>
+        <option value="7">121+</option>
     </div></select><br><br>
                                                                
 <form>
@@ -291,8 +308,11 @@ a {
     </form>
     <div class="selectWrapper">
     <form action="index.php" method="post" target="_blank"> 
-</div></body>  
-<br>
-<br>
+</div>
+	!-->
 
 
+
+</body>  
+<br>
+<br>
