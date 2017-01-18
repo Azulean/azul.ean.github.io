@@ -208,8 +208,8 @@ a, a:link {
     <div class="special-title">
    <br><center><h1>ScouDr.</h1></center>
 </div><hr>
-<p><form action="wellitsaplaceholderfornow">
-    <strong>Team : <input type="number" name="teams" min="0" max="99999" maxlength="5">
+<p><form action="http://www.w3schools.com/html/action_page.php">
+    <strong>Team Number: <input type="number" name="teams" min="0" max="99999" maxlength="5">
 <table>
 	<tbody><tr><td><input type="checkbox" name="notShow" value="1"><strong>Robot does NOT SHOW</td></tr>
 	<tr><td><input type="checkbox" name="notWorking" value="1"><strong>Robot does NOT WORK</td></tr><br>
@@ -217,7 +217,7 @@ a, a:link {
 <strong><h2><i>Autonomous</i></h2></strong>	
 <fieldset>
 <div>
-	<strong><input type="checkbox" name="noAuto" value="1">No Auto
+	<strong><input type="radio" name="noAuto" value="1">No Auto<br>
 	<input type="checkbox" name="crossBase" value="1">Crosses Baseline<br><hr>
 	
 	<u><h3>Fuel</h3></u>
@@ -225,24 +225,33 @@ a, a:link {
 	
 	<u><h4>Low Goal:<h4></u>
 	Low Goal Attempt Successful <input type="radio" name="ALGoalAttempt" value="1">Yes <input type="radio" name="ALGoalAttempt" value="0">No <br>
-	<i>Speed</i><input type="radio" name="LGspeed" value="1">Slow<input type="radio" name="LGspeed" value="2">Moderate<input type="radio" name="LGspeed" value="3">Fast<br>
+	
 	 Low Goals Accuracy (0-10)
-<input type="radio" name="LGAccuracy" value="0">0 <input type="radio" name="LGAccuracy" value="1">1 <input type="radio" name="LGAccuracy" value="3">2 <input type="radio" name="LGAccuracy" value="3">3 <input type="radio" name="LGAccuracy" value="4">4 <input type="radio" name="LGAccuracy"value="5">5 <input type="radio" name="LGAccuracy"value="6">6 <input type="radio" name="LGAccuracy"value="7">7 <input type="radio" name="LGAccuracy"value="8">8 <input type="radio" name="LGAccuracy" value="9">9 <input type="radio" name="LGAccuracy"value="10">10 
+<input type="radio" name="LGAccuracy" value="0">0 <input type="radio" name="LGAccuracy" value="1">1 <input type="radio" name="LGAccuracy" value="3">2 <input type="radio" name="LGAccuracy" value="3">3 <input type="radio" name="LGAccuracy" value="4">4 <input type="radio" name="LGAccuracy"value="5">5 <input type="radio" name="LGAccuracy"value="6">6 <input type="radio" name="LGAccuracy"value="7">7 <input type="radio" name="LGAccuracy"value="8">8 <input type="radio" name="LGAccuracy" value="9">9 <input type="radio" name="LGAccuracy"value="10">10<br>
+	Speed<input type="radio" name="LGspeed" value="1">Slow<input type="radio" name="LGspeed" value="2">Moderate<input type="radio" name="LGspeed" value="3">Fast<br>
 	<u><p>High Goal:<p></u>
 	High Goal Attempt Successful <input type="radio" name="AHGoalAttempt" value="1">Yes<input type="radio" name="AHGoalAttempt" value="0">No<br>
 	 High Goal Accuracy (0-10)
 <input type="radio" name="HGAccuracy" value="0">0 <input type="radio" name="HGAccuracy" value="1">1 <input type="radio" name="HGAccuracy" value="3">2 <input type="radio" name="HGAccuracy" value="3">3 <input type="radio" name="HGAccuracy" value="4">4 <input type="radio" name="HGAccuracy"value="5">5 <input type="radio" name="HGAccuracy"value="6">6 <input type="radio" name="HGAccuracy"value="7">7 <input type="radio" name="HGAccuracy"value="8">8 <input type="radio" name="HGAccuracy" value="9">9 <input type="radio" name="HGAccuracy"value="10">10 
 		<br>Speed <input type="radio" name="HGspeed" value="1">Slow<input type="radio" name="HGspeed" value="2">Moderate<input type="radio" name="HGspeed" value="3">Fast<br>
 	<u><p>Gears:</p></u>
-	Attempted <input type="checkbox" name="GearAttempt" value="1"><br>
+	Attempted <input type="checkbox" name="GearAttempt" value="1">
+	<br>
 	Delivered <input type="checkbox" name="GearDelivered" value="1">
 	<u><p>Hoppers (50 Balls Each):</p></u>
-	Deployed <input type="number" name="GearAttempt" min="0" max="10">
+	Deployed <input type="number" name="HopDeploy" min="0" max="10">
 </fieldset>
 <i><h2>Tele-Operated</h2></i>
 <fieldset>
 <u><h3><i>Fuel</i><h3></u>
 </fieldset>
+
+
+    <input type="submit" value="Submit" method="post"> 
+     </div>
+    </form>
+
+
 <!--Unnecessary for the moment 
 	Kind of just for a reference xD 
 </fieldset>
