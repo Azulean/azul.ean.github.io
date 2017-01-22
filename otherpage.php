@@ -12,9 +12,21 @@
 	</head>
 	<head>
 	<style>
+	body{
+    background: linear-gradient(to bottom right, #041b0e, #0c5029);
+    height: 662px;
+    background: green; /* For browsers that do not support gradients */    
+    background: -webkit-linear-gradient(left top, #041b0e, #0c5029); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #041b0e, #0c5029); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #041b0e, #0c5029); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #041b0e, #0c5029); /* Standard syntax (must be last) */
+	}
 
+}
 	</style>
-	
+
+
+
 	<link rel="stylesheet" href="main.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
@@ -43,25 +55,30 @@ function myFunction() {
 }
 </script>
 
-<div align="center">
-<div class="linky">
-<a href="http://therobodox.org" target:"_blank">Robodox</a>
+<div align="center" style="position:fixed; top:2%; left:40%">
+<a href="http://therobodox.org" class="" target="_blank"><span>
+  <img src="doxlogo.png" alt="Dox Logo" style="width:275px;height:173.8px;border:0;">
+</a>
 </div>
 
-<div align="center" style="position:fixed; top:10%; left:40%;">
+<div align="center" style="position:fixed; top:20%; left:10%;">
 <div class="font-effect-3d">
-<h1>ScouDr.</h1>
+<div class="scoudr">ScouDr.</div>
 </div>
       <div class="linky">
         <a href="/">Enter</a>
         </div>
         <div class="linky">
-        <a href="/">Stats</a>
+        <a href="info.php">Stats</a>
         </div>
         </div>
 <div style="center" style="position:fixed;">
 
 </div>
+
+<div id="grad1">
+</div>
+
 </body>
 </html>
 
