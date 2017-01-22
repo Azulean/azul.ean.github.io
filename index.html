@@ -26,13 +26,10 @@
 <div class="wrapper">
    <div class="foot-nav">
       <div class="linky">
- 		<a href="otherpage.php">Home</a>
+ 		<a href="home.php">Home</a>
       </div>
-      <div class="linky">
-        <a href="/">ScouDr.</a>
-        </div>
         <div class="linky">
-        <a href="/">Stats</a>
+        <a href="info.php">Stats</a>
         </div>
         </div>
     </ul>
@@ -52,7 +49,6 @@
 	<strong><input type="radio" name="noAuto" value="1">No Auto<br>
 	<input type="checkbox" name="crossBase" value="1">Crosses Baseline<br>
 	<u><h3>Fuel</h3></u>
-
 	
 	<u><h4>Low Goal:<h4></u>
 	Low Goal Attempt Successful <input type="radio" name="ALGoalAttempt" value="1">Yes <input type="radio" name="ALGoalAttempt" value="0">No<br>
@@ -70,12 +66,9 @@
 	<u><p>Hoppers (10 Hoppers Total):</p></u>
 	Deployed <input type="number" name="AHopDeploy" min="0" max="10" value="0">
 </fieldset>
-
 <i><h2>Tele-Operated</h2></i>
-
 <fieldset>
 <u><h4>Fuel</h4></u>
-
 <u><h4>Low Goal:</h4></u>
 <div>
 Low Goals Scored (Approximate #) <select id="TLGScored" name="TLGScored"><option value="" disabled="disabled" selected="selected"><p><strong></p></option>
@@ -102,7 +95,6 @@ Low Goals Scored (Approximate #) <select id="TLGScored" name="TLGScored"><option
 </select></div>
 Low Goal Accuracy<input type="radio" name="TLGAccuracy" value="0">0 <input type="radio" name="TLGAccuracy" value="1">1 <input type="radio" name="TLGAccuracy" value="2">2 <input type="radio" name="TLGAccuracy" value="3">3 <input type="radio" name="TLGAccuracy" value="4">4 <input type="radio" name="TLGAccuracy"value="5">5 <input type="radio" name="TLGAccuracy"value="6">6 <input type="radio" name="TLGAccuracy"value="7">7 <input type="radio" name="TLGAccuracy"value="8">8 <input type="radio" name="TLGAccuracy" value="9">9 <input type="radio" name="TLGAccuracy"value="10">10<br> 
 Speed<input type="radio" name="TLGspeed" value="1">Slow<input type="radio" name="TLGspeed" value="2">Moderate<input type="radio" name="TLGspeed" value="3">Fast<br>
-
 <u><h4>High Goal:</h4></u>
 <div>
 High Goals Scored (Approximate #) <select id="THGScored" name="THGScored"><option value="" disabled="disabled" selected="selected"><p><strong></p></option>
@@ -127,36 +119,27 @@ High Goals Scored (Approximate #) <select id="THGScored" name="THGScored"><optio
 		<option value="18">291-300</option>
 		<option value="19">300+</option>
 </select><br>
-
 High Goal Accuracy<input type="radio" name="THGAccuracy" value="0">0 <input type="radio" name="THGAccuracy" value="1">1 <input type="radio" name="THGAccuracy" value="2">2 <input type="radio" name="THGAccuracy" value="3">3 <input type="radio" name="THGAccuracy" value="4">4 <input type="radio" name="THGAccuracy"value="5">5 <input type="radio" name="THGAccuracy"value="6">6 <input type="radio" name="THGAccuracy"value="7">7 <input type="radio" name="THGAccuracy"value="8">8 <input type="radio" name="THGAccuracy" value="9">9 <input type="radio" name="THGAccuracy"value="10">10
 <br>Speed<input type="radio" name="THGspeed" value="1">Slow<input type="radio" name="THGspeed" value="2">Moderate<input type="radio" name="THGspeed" value="3">Fast<br>
-
 </div>
-
 <u><h4>Gears</h4></u>
 <strong>Gears Delivered <input type="number" name="TGearDelivered" min="0" max="13" maxlength="2"><br>
 <strong>Approx. Cycle Time (from when bot takes gear to delivery) <input type="number" name="TGearCycle" min="0" max="180" maxlength="3"> sec
 <u><h4>Hoppers (10 Hoppers Total)</h4></u>
-	Deployed <input type="number" name="THopDeploy" min="0" max="10" value="0">
+	Deployed <input type="number" name="THopDeployed" min="0" max="10" value="0">
 	
 <u><h4>Robot Speed</h4></u>
 Movement Speed<input type="radio" name="RoboSpeed" value="1">1 <input type="radio" name="RoboSpeed" value="2">2 <input type="radio" name="RoboSpeed" value="3">3 <input type="radio" name="RoboSpeed" value="4">4 <input type="radio" name="RoboSpeed"value="5">5 <input type="radio" name="RoboSpeed"value="6">6 <input type="radio" name="RoboSpeed"value="7">7 <input type="radio" name="RoboSpeed"value="8">8 <input type="radio" name="RoboSpeed" value="9">9 <input type="radio" name="RoboSpeed"value="10">10
-
 <u><h4>Defense</h4></u>
 Strength of Defense<input type="radio" name="DefStrength" value="0">0 <input type="radio" name="DefStrength" value="1">1 <input type="radio" name="DefStrength" value="2">2 <input type="radio" name="DefStrength" value="3">3 <input type="radio" name="DefStrength" value="4">4 <input type="radio" name="DefStrength"value="5">5 <input type="radio" name="DefStrength"value="6">6 <input type="radio" name="DefStrength"value="7">7 <input type="radio" name="DefStrength"value="8">8 <input type="radio" name="DefStrength" value="9">9 <input type="radio" name="DefStrength"value="10">10
-
 <u><h4>Hang</h4></u>
 Attempted <input type="checkbox" name="HangAttempt" value="1"><br>
 Successful <input type="checkbox" name="HangSuccess" value="1">
-
-
 </fieldset><br>
  
     <center><input type="submit" value="Submit" method="post"> 
      </div>
     </form>
-
-
 <!--Unnecessary for the moment 
 	Kind of just for a reference xD 
 </fieldset>
@@ -211,7 +194,3 @@ Successful <input type="checkbox" name="HangSuccess" value="1">
 </body>  
 <br>
 <br>
-
-
-
-
