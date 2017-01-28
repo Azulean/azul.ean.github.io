@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <style type="text/css">
 	<link rel="stylesheet" href="main.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
@@ -17,23 +17,30 @@
     <title>ScouDr.</title>
 </head>
 <body>
-	
+<div id="mainNav">
+<ul>
+  <li><a href="home.php">Home</a></li>
+  <li><a class="active" >Enter Info</a></li>
+  <li><a href="info.php	">Stats</a></li>
+</ul>
+</div>
+
 <div id="header">
 	<div id="header-content">
-		<a href="http://therobodox.org" target="_blank">Robodox</a>
+		<a href="http://therobodox.org" class="" target="_blank"><span>
 		</div>
 	</div>
 <div class="wrapper">
    <div class="foot-nav">
       <div class="linky">
- 		<a href="home.php">Home</a>
+ 		<a href="home.php">Home</a>	
       </div>
         <div class="linky">
         <a href="info.php">Stats</a>
         </div>
         </div>
     </ul>
-   	
+<div class="container">   	
     <div class="font-effect-3d">
    <br><center><h1>ScouDr.</h1></center>
 </div><hr>
@@ -44,7 +51,8 @@
 	<tr><td><input type="checkbox" name="notWorking" value="1"><strong>Robot does NOT WORK</td></tr><br>
 </tbody></table><hr>
 <strong><h2><i>Autonomous</i></h2></strong>	
-<fieldset>
+<div class="fieldset-"
+<fieldset class="form-control">
 <div>
 	<strong><input type="radio" name="noAuto" value="1">No Auto<br>
 	<input type="checkbox" name="crossBase" value="1">Crosses Baseline<br>
@@ -66,12 +74,13 @@
 	<u><p>Hoppers (10 Hoppers Total):</p></u>
 	Deployed <input type="number" name="AHopDeploy" min="0" max="10" value="0">
 </fieldset>
+</div>
 <i><h2>Tele-Operated</h2></i>
 <fieldset>
 <u><h4>Fuel</h4></u>
 <u><h4>Low Goal:</h4></u>
 <div>
-Low Goals Scored (Approximate #) <select id="TLGScored" name="TLGScored"><option value="" disabled="disabled" selected="selected"><p><strong></p></option>
+Low Goals Scored (Approximate #) <select class="form-control" id="TLGScored" name="TLGScored"><option value="" disabled="disabled" selected="selected"><p><strong></p></option>
         <option value="0">0</option>
         <option value="1">1-10</option>
         <option value="2">11-20</option>
@@ -129,7 +138,7 @@ High Goal Accuracy<input type="radio" name="THGAccuracy" value="0">0 <input type
 	Deployed <input type="number" name="THopDeployed" min="0" max="10" value="0">
 	
 <u><h4>Robot Speed</h4></u>
-Movement Speed<input type="radio" name="RoboSpeed" value="1">1 <input type="radio" name="RoboSpeed" value="2">2 <input type="radio" name="RoboSpeed" value="3">3 <input type="radio" name="RoboSpeed" value="4">4 <input type="radio" name="RoboSpeed"value="5">5 <input type="radio" name="RoboSpeed"value="6">6 <input type="radio" name="RoboSpeed"value="7">7 <input type="radio" name="RoboSpeed"value="8">8 <input type="radio" name="RoboSpeed" value="9">9 <input type="radio" name="RoboSpeed"value="10">10
+Movement Speed<input type="radio" name="RoboSpeed" value="1">Slow<input type="radio" name="RoboSpeed" value="2">Moderate<input type="radio" name="RoboSpeed" value="3">Fast 
 <u><h4>Defense</h4></u>
 Strength of Defense<input type="radio" name="DefStrength" value="0">0 <input type="radio" name="DefStrength" value="1">1 <input type="radio" name="DefStrength" value="2">2 <input type="radio" name="DefStrength" value="3">3 <input type="radio" name="DefStrength" value="4">4 <input type="radio" name="DefStrength"value="5">5 <input type="radio" name="DefStrength"value="6">6 <input type="radio" name="DefStrength"value="7">7 <input type="radio" name="DefStrength"value="8">8 <input type="radio" name="DefStrength" value="9">9 <input type="radio" name="DefStrength"value="10">10
 <u><h4>Hang</h4></u>
