@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <style type="text/css">
 	<link rel="stylesheet" href="main.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
-    </style>
 	<head>
+	
+	<script type="text/javascript" src="bootstrap.js">
+	</script>
+	<link rel="stylesheet" href="bootstrap.css" type="text/css">
 	<link rel="stylesheet" href="main.css" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Vast+Shadow" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
@@ -17,43 +19,72 @@
     <title>ScouDr.</title>
 </head>
 <body>
-<div id="mainNav">
-<ul>
-  <li><a href="home.php">Home</a></li>
-  <li><a class="active" >Enter Info</a></li>
-  <li><a href="info.php	">Stats</a></li>
-</ul>
-</div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
 
-<div id="header">
-	<div id="header-content">
-		<a href="http://therobodox.org" class="" target="_blank"><span>
-		</div>
-	</div>
-<div class="wrapper">
-   <div class="foot-nav">
-      <div class="linky">
- 		<a href="home.php">Home</a>	
-      </div>
-        <div class="linky">
-        <a href="info.php">Stats</a>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+<a class="navbar-brand" href="http://therobodox.org" class="" target="_blank" />
+		<img style="max-width:90px;margin-top:-22px;" alt="robodoxlogo" src="doxlogo.png"/>
+		</a>
         </div>
-        </div>
-    </ul>
+    
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Enter Info</a></li>
+            <li><a href="#">Statistics</a></li>
+            <li><a href="#">Contact</a></li>
+            <li>
+              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>
+            </li>
+          </ul>
+          <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
+            <form class="navbar-form navbar-right form-inline" role="form">
+              <div class="form-group">
+                <label class="sr-only" for="Email">Email</label>
+                <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
+              </div>
+              <div class="form-group">
+                <label class="sr-only" for="Password">Password</label>
+                <input type="password" class="form-control" id="Password" placeholder="Password" required />
+              </div>
+              <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+
 <div class="container">   	
     <div class="font-effect-3d">
    <br><center><h1>ScouDr.</h1></center>
 </div><hr>
-<p><form action="http://www.w3schools.com/html/action_page.php">
-    <strong>Team Number: <input type="number" name="teams" min="0" max="99999" maxlength="5" value="0">
+<form class="form-inline" action="http://www.w3schools.com/html/action_page.php">
+  <div class="form-group">
+    <label for="">Team Number :</label>
+    <input type="number" class="form-control" id="teamNumber" placeholder="Team Number">
+  </div>
+
+  
 <table>
 	<tbody><tr><td><input type="checkbox" name="notShow" value="1"><strong>Robot does NOT SHOW</td></tr>
 	<tr><td><input type="checkbox" name="notWorking" value="1"><strong>Robot does NOT WORK</td></tr><br>
 </tbody></table><hr>
 <strong><h2><i>Autonomous</i></h2></strong>	
-<div class="fieldset-"
-<fieldset class="form-control">
-<div>
+<form>
+<div class="fieldset-">
 	<strong><input type="radio" name="noAuto" value="1">No Auto<br>
 	<input type="checkbox" name="crossBase" value="1">Crosses Baseline<br>
 	<u><h3>Fuel</h3></u>
@@ -73,10 +104,10 @@
 	Delivered <input type="checkbox" name="AGearDelivered" value="1">
 	<u><p>Hoppers (10 Hoppers Total):</p></u>
 	Deployed <input type="number" name="AHopDeploy" min="0" max="10" value="0">
-</fieldset>
 </div>
+</form>
 <i><h2>Tele-Operated</h2></i>
-<fieldset>
+<div class="fieldset-">
 <u><h4>Fuel</h4></u>
 <u><h4>Low Goal:</h4></u>
 <div>
@@ -145,10 +176,11 @@ Strength of Defense<input type="radio" name="DefStrength" value="0">0 <input typ
 Attempted <input type="checkbox" name="HangAttempt" value="1"><br>
 Successful <input type="checkbox" name="HangSuccess" value="1">
 </fieldset><br>
- 
-    <center><input type="submit" value="Submit" method="post"> 
-     </div>
+ </div>
+    <center><input type="submit" class="btn btn-default" value="Submit" method="post"> 
+     
     </form>
+	
 <!--Unnecessary for the moment 
 	Kind of just for a reference xD 
 </fieldset>
@@ -200,6 +232,11 @@ Successful <input type="checkbox" name="HangSuccess" value="1">
     <form action="index.php" method="post" target="_blank"> 
 </div>
 	-->
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
+	</script>
+	<script src="../../dist/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/docs.min.js"></script>
 </body>  
-<br>
-<br>
+</html>
