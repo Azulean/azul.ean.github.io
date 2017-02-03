@@ -28,41 +28,32 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-<a class="navbar-brand" href="http://therobodox.org" class="" target="_blank" />
+       <a class="navbar-brand" href="http://therobodox.org" class="" target="_blank" />
 		<img style="max-width:90px;margin-top:-22px;" alt="robodoxlogo" src="doxlogo.png"/>
 		</a>
         </div>
     
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-2">
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Enter Info</a></li>
-            <li><a href="#">Statistics</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="home.php"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp Home </a></li>
+            <li><a class="active"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp Enter Info</a></li>
+            <li><a href="info.php"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp Statistics</a></li>
+
             <li>
-              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse2" aria-expanded="false" aria-controls="nav-collapse2">Sign in</a>
+              <a class="btn btn-default btn-outline btn-circle collapsed"  data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1">More</a>
             </li>
           </ul>
-          <div class="collapse nav navbar-nav nav-collapse slide-down" id="nav-collapse2">
-            <form class="navbar-form navbar-right form-inline" role="form">
-              <div class="form-group">
-                <label class="sr-only" for="Email">Email</label>
-                <input type="email" class="form-control" id="Email" placeholder="Email" autofocus required />
-              </div>
-              <div class="form-group">
-                <label class="sr-only" for="Password">Password</label>
-                <input type="password" class="form-control" id="Password" placeholder="Password" required />
-              </div>
-              <button type="submit" class="btn btn-success">Sign in</button>
-            </form>
-          </div>
+          <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse1">
+		  
+            <li><a href="login.php">Login</a></li>
+          </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
@@ -97,6 +88,8 @@
 	<u><p>High Goal:<p></u>
 	High Goal Attempt Successful <input type="radio" name="AHGoalAttempt" value="1">Yes<input type="radio" name="AHGoalAttempt" value="0">No<br>
 	High Goal Accuracy (0-10)
+
+           
 <input type="radio" name="AHGAccuracy" value="0">0 <input type="radio" name="AHGAccuracy" value="1">1 <input type="radio" name="AHGAccuracy" value="2">2 <input type="radio" name="AHGAccuracy" value="3">3 <input type="radio" name="AHGAccuracy" value="4">4 <input type="radio" name="AHGAccuracy"value="5">5 <input type="radio" name="AHGAccuracy"value="6">6 <input type="radio" name="AHGAccuracy"value="7">7 <input type="radio" name="AHGAccuracy"value="8">8 <input type="radio" name="AHGAccuracy" value="9">9 <input type="radio" name="AHGAccuracy"value="10">10 
 	<u><p>Gears:</p></u>
 	Attempted <input type="checkbox" name="AGearAttempt" value="1">
@@ -137,7 +130,7 @@ Low Goal Accuracy<input type="radio" name="TLGAccuracy" value="0">0 <input type=
 Speed<input type="radio" name="TLGspeed" value="1">Slow<input type="radio" name="TLGspeed" value="2">Moderate<input type="radio" name="TLGspeed" value="3">Fast<br>
 <u><h4>High Goal:</h4></u>
 <div>
-High Goals Scored (Approximate #) <select id="THGScored" name="THGScored"><option value="" disabled="disabled" selected="selected"><p><strong></p></option>
+High Goals Scored (Approximate #) <select class="form-control" id="THGScored" name="THGScored"><option value="" disabled="disabled" selected="selected"><p><strong></p></option>
         <option value="0">0</option>
         <option value="1">1-10</option>
         <option value="2">11-20</option>
